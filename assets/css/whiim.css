@@ -61,7 +61,7 @@
   color: rgba(255, 255, 255, .9);
 }
 @media (max-width: 699px) {
-  .w-hero__media img { object-position: 45% 60%; }
+  .w-hero__media img { object-position: 57% 60%; }
   .w-hero__cta { left: var(--wpad); bottom: 56px; }
 }
 

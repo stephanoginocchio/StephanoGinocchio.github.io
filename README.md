@@ -1,6 +1,6 @@
-# stephanoginocchio.github.io
+# www.stephanoginocchio.com
 
-Web personal de Stephano Ginocchio + whiim (invitaciones web de boda), hecha a partir de las maquetas de Illustrator. HTML, CSS y JavaScript sin frameworks; animaciones con GSAP.
+Web personal de Stephano Ginocchio + whiim (invitaciones web de boda), hecha a partir de las maquetas de Illustrator. HTML, CSS y JavaScript sin frameworks; animaciones con GSAP. Se publica con GitHub Pages desde el repositorio `stephanoginocchio.github.io`.
 
 ## Páginas
 
@@ -41,14 +41,32 @@ y entra a http://localhost:8000
 
 ## Publicar en GitHub Pages
 
-1. Crea un repositorio llamado exactamente **`stephanoginocchio.github.io`** (así la web queda en la raíz del dominio).
-2. Sube todo el contenido de esta carpeta, `.nojekyll` incluido.
+1. El repositorio se llama exactamente **`stephanoginocchio.github.io`**. No le cambies el nombre.
+2. Sube todo el contenido de esta carpeta, `.nojekyll` y `CNAME` incluidos.
 3. En el repositorio: Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`.
-4. En uno o dos minutos queda en https://stephanoginocchio.github.io y whiim en https://stephanoginocchio.github.io/whiim/
+4. En uno o dos minutos los cambios se ven en https://www.stephanoginocchio.com y whiim en https://www.stephanoginocchio.com/whiim/
 
 Si en vez de eso lo subes como proyecto (`usuario.github.io/otro-nombre/`), la página 404 deja de encontrar sus estilos, porque usa rutas que empiezan con `/`.
 
-Las vistas previas al compartir el link (WhatsApp, Instagram) usan `assets/img/og/stephano.jpg` y `assets/img/og/whiim.jpg`, con la dirección `https://stephanoginocchio.github.io/` escrita en el `<head>` de cada página. Si cambias de dominio, cámbiala ahí.
+## Dominio: www.stephanoginocchio.com
+
+Registrado en Spaceship el 12 de octubre de 2026, con renovación automática cada año. `stephanoginocchio.com` y `stephanoginocchio.github.io` redirigen solos a `www.stephanoginocchio.com`.
+
+- **No borres el archivo `CNAME`.** Es lo que le dice a GitHub cuál es tu dominio: si desaparece en un commit, la web vuelve a `github.io`. Antes de copiar archivos nuevos a la carpeta, haz *Pull origin* en GitHub Desktop.
+- **Registros DNS** (Spaceship → Advanced DNS → stephanoginocchio.com). Para la web van solo estos:
+
+  | Tipo | Host | Valor |
+  |---|---|---|
+  | A | `@` | `185.199.108.153` |
+  | A | `@` | `185.199.109.153` |
+  | A | `@` | `185.199.110.153` |
+  | A | `@` | `185.199.111.153` |
+  | CNAME | `www` | `stephanoginocchio.github.io` |
+  | TXT | `_github-pages-challenge-stephanoginocchio` | El código que da GitHub. No lo borres. |
+
+- El TXT verifica el dominio en GitHub (tu foto → Settings → Pages) e impide que otra cuenta publique una web con él.
+- No agregues registros comodín (`*`): dejan tus subdominios expuestos aunque el dominio esté verificado. Si algún día agregas correo con tu dominio, sus registros (MX y TXT) conviven con estos.
+- Las vistas previas al compartir el link (WhatsApp, Instagram) usan `assets/img/og/stephano.jpg` y `assets/img/og/whiim.jpg`, con la dirección `https://www.stephanoginocchio.com/` escrita en el `<head>` de cada página. Si cambias la portada de whiim, conviene rehacer `whiim.jpg` (1200 × 630 px).
 
 ## Tipografías
 
@@ -71,7 +89,7 @@ Tu hero está diseñado en **65 Medium**, que el kit no trae. Mientras no lo agr
 
 Fotos de [Pexels](https://www.pexels.com/license/), uso libre sin atribución obligatoria. IDs:
 
-- whiim: portada 7119286, intro 32778169
+- whiim: portada e intro por confirmar (las cambiaste por fotos nuevas; anota aquí de dónde son)
 - Lucía & Mateo: 12341927, 6968988, 18856007, 31724460, 26673763
 - Valeria & Diego: 18079000, 20091878, 10673499, 14000811, 8669256
 - Camila & Joaquín: 8693631, 7907264, 4661209, 3714427, 15784736
