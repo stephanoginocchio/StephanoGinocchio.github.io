@@ -21,7 +21,13 @@
   var hasGsap = !!(gsap && window.ScrollTrigger) && !reduce;
   var onFile = location.protocol === 'file:';
 
-  if (hasGsap) gsap.registerPlugin(window.ScrollTrigger);
+  var isTouch = matchMedia('(hover: none) and (pointer: coarse)').matches;   // celular y tablet
+
+  if (hasGsap) {
+    gsap.registerPlugin(window.ScrollTrigger);
+    /* en celular la barra del navegador aparece y se esconde: que eso no recalcule todo */
+    window.ScrollTrigger.config({ ignoreMobileResize: true });
+  }
   else doc.classList.remove('anim');
 
   /* ---------- utilidades ---------- */
@@ -445,11 +451,13 @@
        data-parallax-fg-desk   → igual, pero solo con mouse
        data-parallax-trigger   → (opcional) otro elemento marca el recorrido
        data-parallax-touch     → (opcional) en celular empieza en otro punto
-                                 (home: "bottom bottom", cuando termina la marea)
+     Solo con mouse. En celular un efecto atado al scroll con JavaScript va un
+     paso detrás del dedo y la imagen salta; ahí se usa el "efecto cortina"
+     (la portada se queda quieta y la página sube encima), que es puro CSS
+     y lo mueve el propio navegador: ver whiim.css y personal.css.
      ========================================================================== */
-  var isTouch = matchMedia('(hover: none) and (pointer: coarse)').matches;
-
   function initParallax(scope) {
+    if (isTouch) return;
     scope.querySelectorAll('[data-parallax-root]').forEach(function (root) {
       root.querySelectorAll('[data-parallax]').forEach(function (el) {
         var k = parseFloat(el.getAttribute('data-parallax')) || .4;
@@ -478,6 +486,13 @@
   function initFooterMotion() {
     var box = document.querySelector('.foot__name');
     if (!box || !hasGsap) return;
+    if (isTouch) {                                  // celular: sube una vez, sin atarse al scroll
+      gsap.fromTo(box.firstElementChild, { yPercent: 62 }, {
+        yPercent: 0, duration: 1.3, ease: 'expo.out',
+        scrollTrigger: { trigger: box, start: 'top 95%', once: true }
+      });
+      return;
+    }
     gsap.fromTo(box.firstElementChild, { yPercent: 62 }, {
       yPercent: 0, ease: 'none',
       scrollTrigger: { trigger: box, start: 'top bottom', end: 'bottom 72%', scrub: .6 }

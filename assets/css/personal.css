@@ -334,3 +334,21 @@
 }
 .nf__home { color: var(--mute); transition: color .3s; }
 .nf__home:hover { color: var(--ice); }
+
+/* ==========================================================================
+   CELULAR Y TABLET: efecto cortina en la portada de cada proyecto
+   (la foto se queda quieta y la página sube por encima, sin JavaScript)
+   ========================================================================== */
+@media (hover: none) and (pointer: coarse) {
+  .p-hero { position: sticky; top: var(--nav-h); }
+  #project > section:not(.p-hero),
+  #project > .p-next { position: relative; z-index: 1; background: var(--bg); }
+  .p-hero + section::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 100%;
+    height: 90px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--bg));
+    pointer-events: none;
+  }
+}

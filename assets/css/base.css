@@ -501,7 +501,9 @@ ol, ul { padding: 0; list-style: none; }
 /* ==========================================================================
    ANIMACIÓN: estados iniciales (solo si GSAP cargó, ver site.js)
    ========================================================================== */
-[data-parallax], [data-parallax-fg] { will-change: transform; }
+@media (hover: hover), (pointer: fine) {
+  [data-parallax], [data-parallax-fg] { will-change: transform; }
+}
 .anim [data-reveal] { opacity: 0; }
 .anim [data-split]:not(.is-split) { visibility: hidden; }   /* evita un parpadeo antes de partir las líneas */
 .anim [data-split] .line > span { transform: translateY(105%); }

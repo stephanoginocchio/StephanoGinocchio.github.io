@@ -456,3 +456,23 @@
 .b-next__title .arrow { width: .5em; height: .5em; transition: transform .5s var(--ease-out); }
 .b-next:hover .b-next__title .arrow { transform: translate(.08em, -.08em); }
 .b-missing { min-height: 80svh; display: grid; place-content: center; gap: 24px; padding: 140px var(--pad) 80px; text-align: center; }
+
+/* ==========================================================================
+   CELULAR Y TABLET: efecto cortina en las portadas
+   La foto se queda quieta y la página sube por encima. Lo hace el navegador
+   solo (position: sticky), sin JavaScript, así que no salta ni rebota.
+   ========================================================================== */
+@media (hover: none) and (pointer: coarse) {
+  .w-hero, .b-hero { position: sticky; top: 0; }
+  .whiim main > section:not(.w-hero),
+  #boda > section:not(.b-hero),
+  #boda > .b-next { position: relative; z-index: 1; background: var(--bg); }
+  .b-hero + section::before {                    /* borde suave de la "cortina" */
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 100%;
+    height: 90px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--bg));
+    pointer-events: none;
+  }
+}
