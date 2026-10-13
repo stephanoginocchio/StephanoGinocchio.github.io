@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>whiim — invitaciones web de boda a medida · Lima, Perú</title>
+<meta name="description" content="Invitaciones web de boda diseñadas desde cero, una por una. Un link con fecha, lugares, mapas, regalos, dress code y confirmación de asistencia. Lima, Perú.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../assets/img/favicon-whiim.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon-whiim.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="whiim">
+<meta property="og:title" content="whiim — invitaciones web de boda a medida">
+<meta property="og:description" content="Diseñadas una por una, sin plantillas. Lima, Perú.">
+<meta property="og:image" content="https://stephanoginocchio.github.io/assets/img/og/whiim.jpg">
+<meta property="og:url" content="https://stephanoginocchio.github.io/whiim/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/emb0tmp.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/whiim.css">
+<link rel="preload" as="image" href="../assets/img/whiim/hero.webp" imagesrcset="../assets/img/whiim/hero-1200.webp 1200w, ../assets/img/whiim/hero.webp 2400w" imagesizes="100vw">
+<script>!function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('anim');setTimeout(function(){if(!window.__sgReady)d.classList.remove('anim')},3500)}}(document.documentElement)</script>
+
+<script src="../data/config.js" defer></script>
+<script src="../data/bodas.js" defer></script>
+<script src="../assets/vendor/gsap.min.js" defer></script>
+<script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/whiim.js" defer></script>
+</head>
+<body class="whiim" data-page="whiim" data-root="../">
+<a class="skip" href="#main">Saltar al contenido</a>
+<div data-header></div>
+
+<main id="main">
+
+  <!-- PORTADA -->
+  <section class="w-hero" aria-labelledby="w-title" data-parallax-root>
+    <div class="w-hero__media" data-parallax="0.4">
+      <img src="../assets/img/whiim/hero.webp"
+           srcset="../assets/img/whiim/hero-1200.webp 1200w, ../assets/img/whiim/hero.webp 2400w" sizes="100vw"
+           width="2400" height="1602" fetchpriority="high" decoding="async"
+           alt="Novios corriendo de la mano por una carretera entre montañas.">
+    </div>
+    <div class="w-hero__shade"></div>
+    <h1 class="sr-only" id="w-title">whiim: invitaciones web de boda diseñadas a medida, en Lima, Perú</h1>
+    <div class="w-hero__cta" data-parallax-fg>
+      <div class="w-hero__cta-in" data-reveal>
+        <p>Invitaciones web de boda,<br>diseñadas una por una.</p>
+        <a class="w-btn w-btn--glass" data-contact href="#">Escríbenos <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.4 9.6 9.4 2.6M3.4 2.6h6v6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ ES -->
+  <section class="w-intro" aria-labelledby="intro-title">
+    <h2 class="t-h" id="intro-title" data-split>Su boda no se parece a otra.<br>Su invitación tampoco.</h2>
+    <div class="w-intro__grid">
+      <figure class="w-intro__img" data-reveal>
+        <img src="../assets/img/whiim/intro.webp" width="1000" height="1500" loading="lazy" decoding="async"
+             alt="Retrato de novios en blanco y negro: él con lentes oscuros, ella con velo.">
+      </figure>
+      <div class="w-intro__body">
+        <div class="t-mono t-justify" data-reveal>
+          <p>whiim diseña invitaciones web de boda desde cero. Cada una parte de su historia, sus fotos y el tono de su celebración, y se programa a mano para que se vea impecable en cualquier celular. Un solo link reemplaza a la invitación impresa y reúne lo que sus invitados necesitan: fecha, lugares, mapas, regalos, dress code y confirmación de asistencia.</p>
+          <p>Diseñadas por Stephano Ginocchio, en Lima.</p>
+        </div>
+        <!-- Estos números son una propuesta: confírmalos o cámbialos -->
+        <dl class="w-stats" data-reveal>
+          <div class="w-stat"><dt>0</dt><dd>plantillas</dd></div>
+          <div class="w-stat"><dt>2</dt><dd>rondas de cambios</dd></div>
+          <div class="w-stat"><dt>21</dt><dd>días de la idea al envío</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO: la fila más cercana al centro de la pantalla se enciende -->
+  <section class="w-steps" id="proceso" aria-labelledby="steps-title">
+    <h2 class="sr-only" id="steps-title">Cómo trabajamos</h2>
+    <ol class="steps">
+      <li class="step">
+        <h3 class="step__title">Conversamos</h3>
+        <p class="step__desc">Nos cuentan su historia, la fecha, el lugar y el tono de su boda. De esa conversación sale todo el diseño.</p>
+      </li>
+      <li class="step">
+        <h3 class="step__title">Propuesta en 5 días</h3>
+        <p class="step__desc">Les mostramos la dirección visual: tipografía, color, fotos y estructura, pensada solo para ustedes.</p>
+      </li>
+      <li class="step">
+        <h3 class="step__title">Dos rondas de cambios</h3>
+        <p class="step__desc">Ajustamos textos, fotos y detalles hasta que la invitación se sienta completamente suya.</p>
+      </li>
+      <li class="step">
+        <h3 class="step__title">Programada a mano</h3>
+        <p class="step__desc">La construimos y la probamos en celulares y computadoras. Liviana, rápida y sin apps que descargar.</p>
+      </li>
+      <li class="step">
+        <h3 class="step__title">Lista para enviar</h3>
+        <p class="step__desc">Reciben un link para compartir por WhatsApp. Las confirmaciones llegan juntas, en una lista ordenada.</p>
+      </li>
+      <li class="step">
+        <h3 class="step__title">Un recuerdo que queda</h3>
+        <p class="step__desc">Después de la boda la invitación sigue en línea. Con su permiso, entra al archivo de whiim.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- BENEFICIOS: pantallas reales de la invitación de Rosana & Nicanor -->
+  <section class="w-benefits" id="beneficios" aria-labelledby="benefits-title">
+    <div class="w-benefits__head">
+      <h2 class="t-h" id="benefits-title" data-split>¿Qué ganas al usar una<br>invitación web? Todo esto.</h2>
+      <p class="w-benefits__sub" data-reveal>50% para empezar, 50% antes de publicar.</p>
+    </div>
+
+    <div class="cards" tabindex="0" aria-label="Beneficios de una invitación web">
+      <article class="card" data-reveal>
+        <div class="card__media" data-word="RSVP" style="--card-bg:#2a1c14;--card-ink:rgba(255,214,170,.13)">
+          <div class="card__phone"><img src="../assets/img/bodas/rosana-nicanor/pantallas/rsvp.webp" width="600" height="1298" loading="lazy" decoding="async" alt="Pantalla de confirmación de asistencia."></div>
+        </div>
+        <p class="card__text"><b>Confirmaciones ordenadas.</b> Cada invitado confirma desde su celular y las respuestas llegan juntas a una lista. Nada de perseguir a nadie por chat.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="card__media" data-word="Mapa" style="--card-bg:#2b0c11;--card-ink:rgba(255,200,200,.12)">
+          <div class="card__phone"><img src="../assets/img/bodas/rosana-nicanor/pantallas/ceremonia.webp" width="600" height="1298" loading="lazy" decoding="async" alt="Pantalla de ceremonia con hora y botón al mapa."></div>
+        </div>
+        <p class="card__text"><b>Lugares y horarios.</b> Ceremonia y recepción con su hora y un botón al mapa. Un toque y llegan sin preguntar.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="card__media" data-word="36 días" style="--card-bg:#e8e2d6;--card-ink:rgba(70,20,24,.13)">
+          <div class="card__phone"><img src="../assets/img/bodas/rosana-nicanor/pantallas/countdown.webp" width="600" height="1298" loading="lazy" decoding="async" alt="Pantalla con la cuenta regresiva."></div>
+        </div>
+        <p class="card__text"><b>Cuenta regresiva.</b> Los días, horas y minutos que faltan, siempre a la vista y con el diseño de su invitación.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="card__media" data-word="Regalos" style="--card-bg:#3b0e14;--card-ink:rgba(255,190,190,.12)">
+          <div class="card__phone"><img src="../assets/img/bodas/rosana-nicanor/pantallas/regalos.webp" width="600" height="1298" loading="lazy" decoding="async" alt="Pantalla de regalos con botones para copiar los datos."></div>
+        </div>
+        <p class="card__text"><b>Regalos sin incomodar.</b> Cuentas o billeteras digitales en una sección discreta: el invitado copia el número con un toque.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="card__media" data-word="Fotos" style="--card-bg:#111010;--card-ink:rgba(255,255,255,.09)">
+          <div class="card__phone"><img src="../assets/img/bodas/rosana-nicanor/pantallas/galeria.webp" width="600" height="1298" loading="lazy" decoding="async" alt="Pantalla de la galería de fotos."></div>
+        </div>
+        <p class="card__text"><b>Sus fotos, su historia.</b> Una galería y un relato que convierten la invitación en un recuerdo, no solo en un aviso.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="card__media" data-word="Música" style="--card-bg:#1d2619;--card-ink:rgba(220,240,200,.12)">
+          <div class="card__phone"><img src="../assets/img/bodas/rosana-nicanor/pantallas/hero.webp" width="600" height="1298" loading="lazy" decoding="async" alt="Portada de la invitación con el botón de música."></div>
+        </div>
+        <p class="card__text"><b>Música desde la portada.</b> La invitación se abre con su canción. Desde el primer segundo ya se siente como su boda.</p>
+      </article>
+    </div>
+    <div class="cards__foot">
+      <p class="cards__note">Pantallas reales de la invitación de Rosana &amp; Nicanor.</p>
+      <div class="cards__nav">
+        <button class="cards__btn" type="button" data-cards="prev" aria-label="Anterior"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2 4 7l5 5"/></svg></button>
+        <button class="cards__btn" type="button" data-cards="next" aria-label="Siguiente"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="m5 2 5 5-5 5"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHIVO: las carpetas salen de data/bodas.js -->
+  <section class="w-archive" id="archivo" aria-labelledby="archive-title">
+    <h2 class="t-h" id="archive-title" data-split>El archivo.<br>Cada carpeta, una boda.</h2>
+    <ul class="folders" id="folders"></ul>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="w-final" aria-label="Contacto">
+    <div class="w-final__logo" data-logo="whiim" data-reveal></div>
+    <div class="w-final__body" data-reveal>
+      <p>Cuéntennos la fecha y el lugar de su boda. Les respondemos con disponibilidad, precio y los siguientes pasos. Tomamos pocas bodas por mes, para que cada invitación tenga el tiempo que merece.</p>
+      <a class="w-btn" data-contact href="#">Escríbenos <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.4 9.6 9.4 2.6M3.4 2.6h6v6"/></svg></a>
+    </div>
+  </section>
+
+</main>
+
+<div data-footer></div>
+<noscript><p style="padding:24px;font-family:monospace">Esta página necesita JavaScript. Escríbenos por Instagram: @whiim__</p></noscript>
+</body>
+</html>
