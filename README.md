@@ -78,7 +78,7 @@ Tu hero está diseñado en **65 Medium**, que el kit no trae. Mientras no lo agr
 
 - [ ] Poner el WhatsApp de whiim en `data/config.js`.
 - [ ] Agregar Behance y LinkedIn en `data/config.js` (si los dejas vacíos, no aparecen).
-- [ ] Reemplazar las placas "Pendiente" de Master Aplicador, VK Studio, Khōra y Parallelo por imágenes reales, y completar los años.
+- [ ] Reemplazar las placas "Pendiente" de VK Studio, Khōra y Parallelo por imágenes reales, y completar los años. (Master Aplicador ya tiene las suyas.)
 - [ ] Borrar las 4 carpetas de ejemplo de `data/bodas.js` (`ejemplo: true`) y sus fotos en `assets/img/bodas/` cuando tengas bodas reales.
 - [ ] Pedir permiso a Rosana y Nicanor para mostrar su invitación y sus fotos.
 - [ ] Hacer una versión "vitrina" de su invitación sin números de cuenta ni QR, y poner ese link en `invitacion.url`.

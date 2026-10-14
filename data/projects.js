@@ -10,7 +10,6 @@
    - thumb es opcional (versión chica para la grilla, ~520 px de ancho).
    - w y h son el ancho y alto reales: evitan saltos al cargar.
    - mobile es opcional, solo para la portada: versión vertical para celular.
-
    Mientras no tengas la imagen, deja una placa:
      { pendiente: '4/5', nota: 'Portada de la guía' }
    ('4/5' es la proporción ancho/alto que tendrá la imagen.)
@@ -51,24 +50,26 @@ window.PROJECTS = [
     title: 'Master Aplicador Expert',
     subtitle: 'Guía de estudio · VK Studio',
     service: 'Editorial',
-    year: '',   // completa el año
+    year: '2026',
     color: '#ff5fa8',
     statement: ['Contenido técnico', 'tratado como libro de arte.'],
     text: [
-      'Guía impresa de unas 50 páginas para la formación Master Aplicador Expert de VK Studio. Contenido técnico y anatómico —cutícula, pliegue queratinizado, queratosis— explicado con diagramas anotados.',
-      'Un sistema visual negro y cinematográfico que convierte un manual de clase en un objeto que se quiere conservar. Incluye packaging, tarjetas de bienvenida y separadores.'
+      'Guía impresa de 134 páginas para Master Aplicador Expert, la formación de especialización de VK Studio para nail artists. Siete módulos —anatomía, diagnóstico, manicura, química, Dual Form, esculpido y fotografía— explicados con diagramas anotados y procesos paso a paso.',
+      'Un sistema en dos tiempos: aperturas de módulo en negro, a sangre y con el título en vertical, y páginas técnicas en blanco con barras grises, letras de sección y el patrón VK detrás de los diagramas. Un manual de clase convertido en un objeto que se quiere conservar.'
     ],
     credits: [
+      ['Año', '2026'],
       ['Cliente', 'VK Studio'],
       ['Rol', 'Diseño editorial y diagramación'],
-      ['Formato', 'Impreso · ~50 páginas']
+      ['Formato', 'Impreso · A4 · 134 páginas'],
+      ['Herramientas', 'InDesign · Firefly']
     ],
     images: [
-      { pendiente: '4/5', nota: 'Portada de la guía' },
-      { pendiente: '3/2', nota: 'Doble página' },
-      { pendiente: '3/2', nota: 'Diagrama anotado' },
-      { pendiente: '1/1', nota: 'Packaging' },
-      { pendiente: '4/5', nota: 'Tarjetas y separadores' }
+      { src: 'assets/img/proyectos/master-aplicador/01.webp', thumb: 'assets/img/proyectos/master-aplicador/01-sm.webp', w: 1536, h: 1024, alt: 'Una mujer lee la guía abierta en el módulo de esculpido: estructuras cuadrada moderna y almendra clásica.' },
+      { src: 'assets/img/proyectos/master-aplicador/02.webp', thumb: 'assets/img/proyectos/master-aplicador/02-sm.webp', w: 1122, h: 1402, alt: 'Portada negra de la guía: VK Studio, Master Aplicador y «Expert» en letra script, sobre terciopelo burdeos.' },
+      { src: 'assets/img/proyectos/master-aplicador/03.webp', thumb: 'assets/img/proyectos/master-aplicador/03-sm.webp', w: 1122, h: 1402, alt: 'Apertura del módulo 01, Anatomía de la uña: corte anatómico del dedo a la izquierda y el título en vertical a la derecha.' },
+      { src: 'assets/img/proyectos/master-aplicador/04.webp', thumb: 'assets/img/proyectos/master-aplicador/04-sm.webp', w: 1536, h: 1024, alt: 'Doble página del módulo de manicura: diámetros de la fresa flama y creación del bolsillo paso a paso, junto a una fresa real.' },
+      { src: 'assets/img/proyectos/master-aplicador/05.webp', thumb: 'assets/img/proyectos/master-aplicador/05-sm.webp', w: 1536, h: 1024, alt: 'La guía abierta sobre terciopelo burdeos, en la doble página «Capas de la placa ungueal», con luz de ventana.' }
     ]
   },
 
