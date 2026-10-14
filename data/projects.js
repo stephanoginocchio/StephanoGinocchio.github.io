@@ -65,10 +65,10 @@ window.PROJECTS = [
       ['Herramientas', 'InDesign · Firefly']
     ],
     images: [
-      { src: 'assets/img/proyectos/master-aplicador/01.webp', thumb: 'assets/img/proyectos/master-aplicador/01-sm.webp', w: 1536, h: 1024, alt: 'Una mujer lee la guía abierta en el módulo de esculpido: estructuras cuadrada moderna y almendra clásica.' },
+      { src: 'assets/img/proyectos/master-aplicador/01.webp', thumb: 'assets/img/proyectos/master-aplicador/01-sm.webp', w: 1536, h: 1024, alt: 'Doble página del módulo de manicura: diámetros de la fresa flama y creación del bolsillo paso a paso, junto a una fresa real.' },
       { src: 'assets/img/proyectos/master-aplicador/02.webp', thumb: 'assets/img/proyectos/master-aplicador/02-sm.webp', w: 1122, h: 1402, alt: 'Portada negra de la guía: VK Studio, Master Aplicador y «Expert» en letra script, sobre terciopelo burdeos.' },
       { src: 'assets/img/proyectos/master-aplicador/03.webp', thumb: 'assets/img/proyectos/master-aplicador/03-sm.webp', w: 1122, h: 1402, alt: 'Apertura del módulo 01, Anatomía de la uña: corte anatómico del dedo a la izquierda y el título en vertical a la derecha.' },
-      { src: 'assets/img/proyectos/master-aplicador/04.webp', thumb: 'assets/img/proyectos/master-aplicador/04-sm.webp', w: 1536, h: 1024, alt: 'Doble página del módulo de manicura: diámetros de la fresa flama y creación del bolsillo paso a paso, junto a una fresa real.' },
+      { src: 'assets/img/proyectos/master-aplicador/04.webp', thumb: 'assets/img/proyectos/master-aplicador/04-sm.webp', w: 1536, h: 1024, alt: 'Una mujer lee la guía abierta en el módulo de esculpido: estructuras cuadrada moderna y almendra clásica.' },
       { src: 'assets/img/proyectos/master-aplicador/05.webp', thumb: 'assets/img/proyectos/master-aplicador/05-sm.webp', w: 1536, h: 1024, alt: 'La guía abierta sobre terciopelo burdeos, en la doble página «Capas de la placa ungueal», con luz de ventana.' }
     ]
   },
