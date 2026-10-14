@@ -12,7 +12,15 @@
   var esc = SG.esc, asset = SG.asset;
   var gsap = window.gsap;
 
-  function projectUrl(slug) { return SG.pageUrl('project.html') + '#' + encodeURIComponent(slug); }
+  /* Un proyecto con página propia (campo "page" en projects.js) se enlaza a
+     esa página, que tiene su propia vista previa al compartir. El resto usa
+     project.html#slug. */
+  function projectUrl(slug) {
+    for (var i = 0; i < P.length; i++) {
+      if (P[i].slug === slug && P[i].page) return SG.pageUrl(P[i].page);
+    }
+    return SG.pageUrl('project.html') + '#' + encodeURIComponent(slug);
+  }
 
   function ratio(img) {
     if (img.pendiente) {
@@ -131,7 +139,8 @@
   function renderProject() {
     var main = document.getElementById('project');
     if (!main) return;
-    var slug = decodeURIComponent(location.hash.replace(/^#/, ''));
+    var fixed = main.getAttribute('data-project');   /* página propia del proyecto */
+    var slug = fixed || decodeURIComponent(location.hash.replace(/^#/, ''));
     var idx = -1;
     P.forEach(function (p, i) { if (p.slug === slug) idx = i; });
     if (idx < 0 && !slug && P.length) idx = 0;
@@ -147,6 +156,8 @@
     }
 
     var p = P[idx];
+    /* los links viejos (project.html#slug) llevan a la página propia si existe */
+    if (!fixed && slug && p.page) { location.replace(SG.pageUrl(p.page)); return; }
     var next = P[(idx + 1) % P.length];
     var imgs = p.images || [];
     var cover = imgs[0], side = imgs[1], rest = imgs.slice(2);
@@ -193,6 +204,8 @@
 
   function initProject() {
     renderProject();
+    var main = document.getElementById('project');
+    if (main && main.getAttribute('data-project')) return;   /* página propia: no depende del # */
     addEventListener('hashchange', function () {
       if (SG.hasGsap) {
         window.ScrollTrigger.getAll().forEach(function (t) {

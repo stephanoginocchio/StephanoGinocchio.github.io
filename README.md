@@ -28,6 +28,19 @@ Web personal de Stephano Ginocchio + whiim (invitaciones web de boda), hecha a p
 
 Imágenes: WebP o JPG, de 1600–2000 px de ancho para portadas y de 1200 px para el resto. Las miniaturas de la grilla (`thumb`) van bien a 520 px.
 
+## Página propia para compartir un proyecto
+
+`project.html#slug` arma cualquier proyecto, pero WhatsApp, Instagram y el correo no ejecutan JavaScript: al compartir ese link, la vista previa es la genérica de la web. Por eso Master Aplicador tiene página propia, `master-aplicador.html`, que se comparte como **stephanoginocchio.com/master-aplicador** y muestra la portada de la guía. Los links viejos con `#master-aplicador` llevan ahí solos.
+
+Para hacer lo mismo con otro proyecto:
+
+1. Duplica `master-aplicador.html` y ponle el slug del proyecto (`vk-studio.html`, por ejemplo).
+2. En su `<head>` cambia el título, la descripción, las dos direcciones (`canonical` y `og:url`), la imagen y su texto (`og:image`, `og:image:alt`). La imagen va en `assets/img/og/`, en JPG de 1200 × 630 px y menos de 300 KB, con lo importante al centro (WhatsApp a veces la recorta en cuadrado).
+3. En el `<body>`, cambia `data-project="master-aplicador"` por el slug nuevo, y la imagen del `preload` por la portada del proyecto.
+4. En `data/projects.js`, agrega `page: 'vk-studio.html'` a ese proyecto.
+
+WhatsApp guarda la vista previa de cada link un tiempo: si cambias la imagen de un link que ya compartiste, puede seguir saliendo la anterior.
+
 ## Verlo en tu compu
 
 Abre `index.html` en el navegador. Si algo no carga, sirve la carpeta con un servidor local:

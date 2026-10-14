@@ -10,6 +10,11 @@
    - thumb es opcional (versión chica para la grilla, ~520 px de ancho).
    - w y h son el ancho y alto reales: evitan saltos al cargar.
    - mobile es opcional, solo para la portada: versión vertical para celular.
+
+   page es opcional: un archivo .html propio del proyecto (como
+   master-aplicador.html), con su título e imagen para la vista previa al
+   compartir el link. La grilla y "Next project" enlazan ahí. Cómo crear uno:
+   en el README, "Página propia para compartir un proyecto".
    Mientras no tengas la imagen, deja una placa:
      { pendiente: '4/5', nota: 'Portada de la guía' }
    ('4/5' es la proporción ancho/alto que tendrá la imagen.)
@@ -47,6 +52,7 @@ window.PROJECTS = [
 
   {
     slug: 'master-aplicador',
+    page: 'master-aplicador.html',   // página propia: se comparte como stephanoginocchio.com/master-aplicador
     title: 'Master Aplicador Expert',
     subtitle: 'Guía de estudio · VK Studio',
     service: 'Editorial',
