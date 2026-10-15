@@ -17,7 +17,7 @@ Web personal de Stephano Ginocchio + whiim (invitaciones web de boda), hecha a p
 ## Qué editar (todo lo de uso diario está en `/data`)
 
 - **`data/config.js`**: correo, ubicación, redes y el **WhatsApp de whiim**. Mientras el WhatsApp esté vacío, "Escríbenos" abre el chat de Instagram de @whiim__.
-- **`data/projects.js`**: proyectos del portafolio. La primera imagen es la portada, la segunda va junto al texto y el resto es la galería. Si todavía no tienes una imagen, deja `{ pendiente: '4/5', nota: 'Qué va aquí' }` y sale una placa gris.
+- **`data/projects.js`**: proyectos del portafolio. La primera imagen es la portada, la segunda va junto al texto y el resto es la galería. Si todavía no tienes una imagen, deja `{ pendiente: '4/5', nota: 'Qué va aquí' }`: esa placa **no se publica**. La web muestra solo imágenes terminadas, y un proyecto sin ninguna (hoy VK Studio, Khōra y Parallelo) no aparece hasta que tenga la primera.
 - **`data/bodas.js`**: las carpetas del archivo de whiim.
 - **Textos de servicios**: en `index.html` (Visual / Editorial / Web).
 - **Textos de whiim** (portada, proceso, beneficios, cierre): en `whiim/index.html`.
@@ -38,8 +38,15 @@ Para hacer lo mismo con otro proyecto:
 2. En su `<head>` cambia el título, la descripción, las dos direcciones (`canonical` y `og:url`), la imagen y su texto (`og:image`, `og:image:alt`). La imagen va en `assets/img/og/`, en JPG de 1200 × 630 px y menos de 300 KB, con lo importante al centro (WhatsApp a veces la recorta en cuadrado).
 3. En el `<body>`, cambia `data-project="master-aplicador"` por el slug nuevo, y la imagen del `preload` por la portada del proyecto.
 4. En `data/projects.js`, agrega `page: 'vk-studio.html'` a ese proyecto.
+5. Escribe el caso en el HTML (ver la sección siguiente).
 
 WhatsApp guarda la vista previa de cada link un tiempo: si cambias la imagen de un link que ya compartiste, puede seguir saliendo la anterior.
+
+## Contenido escrito en el HTML
+
+El menú, el pie, la grilla de proyectos y el caso de cada proyecto con página propia van escritos dentro de los archivos HTML. Así los ven Google, las vistas previas de WhatsApp, LinkedIn y correo, y cualquier lector que no ejecute JavaScript. Al abrir la página, el JavaScript vuelve a dibujar todo desde `data/` y GSAP lo anima, así que la gente siempre ve lo último.
+
+Esa copia escrita se genera con `tools/prerender.py` (lo corre Claude). Si cambias `data/projects.js` o `data/config.js`, la web se actualiza igual, pero pídele a Claude que regenere el HTML para que Google y las vistas previas también lo vean. No edites a mano el contenido que hay dentro de `<div data-header>`, `<div data-footer>`, `id="works"` o `id="project"`: se reemplaza cada vez.
 
 ## Verlo en tu compu
 
@@ -115,4 +122,4 @@ Rosana & Nicanor: capturas de su invitación y fotos de la pareja.
 - GSAP 3.14.2 + ScrollTrigger en `assets/vendor/` (licencia gratuita de GSAP).
 - Sin módulos ni `fetch`: también funciona abriendo los archivos directo desde la compu.
 - Respeta "reducir movimiento" del sistema: sin animaciones, todo visible.
-- Menú, pie de página y cuadrado-puente se dibujan desde `assets/js/site.js`, así se editan en un solo lugar.
+- Menú, pie de página y cuadrado-puente se dibujan desde `assets/js/site.js`, así se editan en un solo lugar. El menú, el pie y la grilla también van escritos en el HTML (ver "Contenido escrito en el HTML").

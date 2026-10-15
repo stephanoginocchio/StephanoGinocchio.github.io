@@ -18,6 +18,9 @@
    Mientras no tengas la imagen, deja una placa:
      { pendiente: '4/5', nota: 'Portada de la guía' }
    ('4/5' es la proporción ancho/alto que tendrá la imagen.)
+   Las placas pendientes NO se publican: la web muestra solo las imágenes
+   terminadas, y un proyecto sin ninguna (hoy VK Studio, Khōra y Parallelo)
+   no aparece hasta que le pongas la primera.
    ========================================================================== */
 window.PROJECTS = [
   {

@@ -8,7 +8,11 @@
 
   var SG = window.SG;
   if (!SG) return;
-  var P = window.PROJECTS || [];
+  /* Solo se publica lo terminado: las imágenes marcadas "pendiente" no salen
+     en la web, y un proyecto sin ninguna imagen terminada no aparece (ni en
+     la grilla, ni en "Next project", ni por su dirección). */
+  function done(p) { return (p.images || []).filter(function (img) { return !img.pendiente; }); }
+  var P = (window.PROJECTS || []).filter(function (p) { return done(p).length > 0; });
   var esc = SG.esc, asset = SG.asset;
   var gsap = window.gsap;
 
@@ -60,7 +64,7 @@
     if (!grid) return;
     var html = '';
     P.forEach(function (p) {
-      (p.images || []).forEach(function (img, i) {
+      done(p).forEach(function (img, i) {
         var first = i === 0;
         html +=
           '<a class="work" data-p="' + esc(p.slug) + '" href="' + projectUrl(p.slug) + '" style="--ar:' + ratio(img).toFixed(4) + '" data-reveal' +
@@ -159,7 +163,7 @@
     /* los links viejos (project.html#slug) llevan a la página propia si existe */
     if (!fixed && slug && p.page) { location.replace(SG.pageUrl(p.page)); return; }
     var next = P[(idx + 1) % P.length];
-    var imgs = p.images || [];
+    var imgs = done(p);
     var cover = imgs[0], side = imgs[1], rest = imgs.slice(2);
     var name = (window.SITE && SITE.name) || 'Stephano Ginocchio';
 
