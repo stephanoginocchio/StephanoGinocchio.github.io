@@ -17,7 +17,7 @@ Web personal de Stephano Ginocchio + whiim (invitaciones web de boda), hecha a p
 ## Qué editar (todo lo de uso diario está en `/data`)
 
 - **`data/config.js`**: correo, ubicación, redes y el **WhatsApp de whiim**. Mientras el WhatsApp esté vacío, "Escríbenos" abre el chat de Instagram de @whiim__.
-- **`data/projects.js`**: proyectos del portafolio. La primera imagen es la portada, la segunda va junto al texto y el resto es la galería. Si todavía no tienes una imagen, deja `{ pendiente: '4/5', nota: 'Qué va aquí' }`: esa placa **no se publica**. La web muestra solo imágenes terminadas, y un proyecto sin ninguna (hoy VK Studio, Khōra y Parallelo) no aparece hasta que tenga la primera.
+- **`data/projects.js`**: proyectos del portafolio. La primera imagen es la portada, la segunda va junto al texto y el resto es la galería. Si todavía no tienes una imagen, deja `{ pendiente: '4/5', nota: 'Qué va aquí' }`: esa placa **no se publica**. La web muestra solo imágenes terminadas, y un proyecto sin ninguna (hoy Khōra y Parallelo) no aparece hasta que tenga la primera.
 - **`data/bodas.js`**: las carpetas del archivo de whiim.
 - **Textos de servicios**: en `index.html` (Visual / Editorial / Web).
 - **Textos de whiim** (portada, proceso, beneficios, cierre): en `whiim/index.html`.
@@ -30,14 +30,14 @@ Imágenes: WebP o JPG, de 1600–2000 px de ancho para portadas y de 1200 px par
 
 ## Página propia para compartir un proyecto
 
-`project.html#slug` arma cualquier proyecto, pero WhatsApp, Instagram y el correo no ejecutan JavaScript: al compartir ese link, la vista previa es la genérica de la web. Por eso Master Aplicador tiene página propia, `master-aplicador.html`, que se comparte como **stephanoginocchio.com/master-aplicador** y muestra la portada de la guía. Los links viejos con `#master-aplicador` llevan ahí solos.
+`project.html#slug` arma cualquier proyecto, pero WhatsApp, Instagram y el correo no ejecutan JavaScript: al compartir ese link, la vista previa es la genérica de la web. Por eso Master Aplicador y VK Studio tienen página propia (`master-aplicador.html`, `vk-studio.html`), que se comparten como **stephanoginocchio.com/master-aplicador** y **stephanoginocchio.com/vk-studio**, cada una con su imagen de vista previa. Los links viejos con `#master-aplicador` llevan ahí solos.
 
 Para hacer lo mismo con otro proyecto:
 
-1. Duplica `master-aplicador.html` y ponle el slug del proyecto (`vk-studio.html`, por ejemplo).
+1. Duplica `master-aplicador.html` y ponle el slug del proyecto (`khora.html`, por ejemplo).
 2. En su `<head>` cambia el título, la descripción, las dos direcciones (`canonical` y `og:url`), la imagen y su texto (`og:image`, `og:image:alt`). La imagen va en `assets/img/og/`, en JPG de 1200 × 630 px y menos de 300 KB, con lo importante al centro (WhatsApp a veces la recorta en cuadrado).
 3. En el `<body>`, cambia `data-project="master-aplicador"` por el slug nuevo, y la imagen del `preload` por la portada del proyecto.
-4. En `data/projects.js`, agrega `page: 'vk-studio.html'` a ese proyecto.
+4. En `data/projects.js`, agrega `page: 'khora.html'` a ese proyecto.
 5. Escribe el caso en el HTML (ver la sección siguiente).
 
 WhatsApp guarda la vista previa de cada link un tiempo: si cambias la imagen de un link que ya compartiste, puede seguir saliendo la anterior.
@@ -98,7 +98,7 @@ Tu hero está diseñado en **65 Medium**, que el kit no trae. Mientras no lo agr
 
 - [ ] Poner el WhatsApp de whiim en `data/config.js`.
 - [ ] Agregar Behance y LinkedIn en `data/config.js` (si los dejas vacíos, no aparecen).
-- [ ] Reemplazar las placas "Pendiente" de VK Studio, Khōra y Parallelo por imágenes reales, y completar los años. (Master Aplicador ya tiene las suyas.)
+- [ ] Agregar imágenes reales y el año a Khōra y Parallelo: hasta entonces no aparecen en la web. (Master Aplicador y VK Studio ya tienen las suyas.)
 - [ ] Borrar las 4 carpetas de ejemplo de `data/bodas.js` (`ejemplo: true`) y sus fotos en `assets/img/bodas/` cuando tengas bodas reales.
 - [ ] Pedir permiso a Rosana y Nicanor para mostrar su invitación y sus fotos.
 - [ ] Hacer una versión "vitrina" de su invitación sin números de cuenta ni QR, y poner ese link en `invitacion.url`.

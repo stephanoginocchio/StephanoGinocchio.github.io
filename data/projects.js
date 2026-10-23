@@ -19,7 +19,7 @@
      { pendiente: '4/5', nota: 'Portada de la guía' }
    ('4/5' es la proporción ancho/alto que tendrá la imagen.)
    Las placas pendientes NO se publican: la web muestra solo las imágenes
-   terminadas, y un proyecto sin ninguna (hoy VK Studio, Khōra y Parallelo)
+   terminadas, y un proyecto sin ninguna (hoy Khōra y Parallelo)
    no aparece hasta que le pongas la primera.
    ========================================================================== */
 window.PROJECTS = [
@@ -84,26 +84,31 @@ window.PROJECTS = [
 
   {
     slug: 'vk-studio',
+    page: 'vk-studio.html',   // página propia: se comparte como stephanoginocchio.com/vk-studio
     title: 'VK Studio',
     subtitle: 'Rebranding y manual de marca',
     service: 'Visual',
-    year: '',
+    year: '2025',
     color: '#ff8cc6',
     statement: ['Un logo inflado', 'y el sistema que lo sostiene.'],
     text: [
-      'Rebranding para VK Studio, academia y marca de nail art de Lima. Un logo inflado y orgánico como versión de arte, una versión plana para el día a día y un sistema de rosas con blanco y negro.',
-      'El manual reúne tipografía (Neue Haas y Satoshi), color, aplicaciones, usos correctos e incorrectos y la comparación entre la imagen anterior y la nueva.'
+      'Identidad para VK Studio, academia y estudio de nail art de Lima que trata cada diseño como una obra. Un logo inflado y brillante como versión de arte para campañas, una versión plana para el día a día y una paleta de tres rosas con blanco, gris y negro.',
+      'El manual fija lo esencial para que la marca se vea igual en cada pieza: el espacio seguro del logo, las combinaciones de color aprobadas, los usos incorrectos y una pareja tipográfica, Neue Haas para títulos y Satoshi para textos.'
     ],
     credits: [
+      ['Año', '2025'],
       ['Cliente', 'VK Studio'],
-      ['Rol', 'Identidad y manual de marca'],
+      ['Rol', 'Identidad visual y manual de marca'],
+      ['Formato', 'Manual de marca · 12 láminas'],
       ['Tipografías', 'Neue Haas · Satoshi']
     ],
     images: [
-      { pendiente: '16/10', nota: 'Logo, versión arte' },
-      { pendiente: '16/10', nota: 'Sistema de color' },
-      { pendiente: '4/5', nota: 'Aplicaciones' },
-      { pendiente: '16/10', nota: 'Antes y después' }
+      { src: 'assets/img/proyectos/vk-studio/01.webp', thumb: 'assets/img/proyectos/vk-studio/01-sm.webp', mobile: 'assets/img/proyectos/vk-studio/01-m.webp', w: 2400, h: 1350, alt: 'Logo de VK Studio en su versión inflada, rosa y brillante, sobre fondo negro.' },
+      { src: 'assets/img/proyectos/vk-studio/02.webp', thumb: 'assets/img/proyectos/vk-studio/02-sm.webp', w: 2400, h: 1350, alt: 'Versión de arte y versión plana del logo: VK y VK Studio en rosa y en blanco.' },
+      { src: 'assets/img/proyectos/vk-studio/03.webp', thumb: 'assets/img/proyectos/vk-studio/03-sm.webp', w: 2400, h: 1350, alt: 'Paleta de colores: Vivid Pink, Blush Pink, Pastel Pink, Pure White, Soft Gray y Deep Black, con sus códigos.' },
+      { src: 'assets/img/proyectos/vk-studio/04.webp', thumb: 'assets/img/proyectos/vk-studio/04-sm.webp', w: 2400, h: 1350, alt: 'Aplicaciones recomendadas: el logo y el nombre sobre fondos rosa, blanco y negro.' },
+      { src: 'assets/img/proyectos/vk-studio/05.webp', thumb: 'assets/img/proyectos/vk-studio/05-sm.webp', w: 2400, h: 1350, alt: 'Tipografía: Neue Haas para títulos y Satoshi para subtítulos y textos.' },
+      { src: 'assets/img/proyectos/vk-studio/06.webp', thumb: 'assets/img/proyectos/vk-studio/06-sm.webp', w: 2400, h: 1350, alt: 'Patrón de logos VK sobre rosa intenso.' }
     ]
   },
 
