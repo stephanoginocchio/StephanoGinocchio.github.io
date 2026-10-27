@@ -73,10 +73,13 @@
     if (!grid) return;
     var html = '';
     P.forEach(function (p) {
-      done(p).forEach(function (img, i) {
+      /* "grid" (opcional) elige qué miniaturas salen en la grilla; si no, todas las imágenes */
+      (p.grid || done(p)).forEach(function (img, i) {
         var first = i === 0;
+        /* las piezas muy verticales (9:16) se recortan a 3:4 para no estirar la fila */
+        var r = ratio(img), tall = r < 0.75;
         html +=
-          '<a class="work" data-p="' + esc(p.slug) + '" href="' + projectUrl(p.slug) + '" style="--ar:' + ratio(img).toFixed(4) + '" data-reveal' +
+          '<a class="work' + (tall ? ' work--tall' : '') + '" data-p="' + esc(p.slug) + '" href="' + projectUrl(p.slug) + '" style="--ar:' + Math.max(r, 0.75).toFixed(4) + '" data-reveal' +
             (first ? ' aria-label="' + esc(p.title + ', ' + p.subtitle) + '"' : ' tabindex="-1" aria-hidden="true"') + '>' +
             '<span class="work__meta">' +
               (first ? '<span class="work__name">' + esc(p.title) + '</span>' : '') +

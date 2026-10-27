@@ -19,6 +19,10 @@
    Tendencia): process es una lista de pasos { title, text, media: [...] } y
    result agrega un bloque "Resultado" con las imágenes desde la tercera.
 
+   grid es opcional: la lista de miniaturas para la grilla de home y
+   portfolio (mismo formato que images). Sin grid, salen todas las imágenes.
+   En la grilla, lo más vertical que 3:4 se recorta a 3:4.
+
    page es opcional: un archivo .html propio del proyecto (como
    master-aplicador.html), con su título e imagen para la vista previa al
    compartir el link. La grilla y "Next project" enlazan ahí. Cómo crear uno:
@@ -186,6 +190,13 @@ window.PROJECTS = [
           { src: 'assets/img/proyectos/disenos-en-tendencia/version-anuncio.webp', w: 720, h: 1280, cap: 'Anuncio · zonas seguras', alt: 'El mismo cuadro en el anuncio, con el texto más lejos de los bordes.' }
         ]
       }
+    ],
+    /* En la grilla: la foto, un clip de Firefly y la portada del reel
+       (las demás piezas finales se parecen entre sí) */
+    grid: [
+      { src: 'assets/img/proyectos/disenos-en-tendencia/01.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/01-sm.webp', w: 2048, h: 1212, alt: 'Uñas press-on de Khōra con relieve dorado bajo un foco de luz.' },
+      { src: 'assets/img/proyectos/disenos-en-tendencia/ff-6kJ.webp', w: 540, h: 960, alt: 'Cuadro de un clip generado con Adobe Firefly: macro de la gema ámbar.' },
+      { src: 'assets/img/proyectos/disenos-en-tendencia/02.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/02-sm.webp', w: 720, h: 1275, alt: 'Portada del reel de Diseños en Tendencia.' }
     ],
     result: {
       title: 'Resultado',
