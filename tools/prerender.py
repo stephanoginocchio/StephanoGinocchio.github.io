@@ -123,6 +123,7 @@ class Quiet(http.server.SimpleHTTPRequestHandler):
 def serve():
     handler = functools.partial(Quiet, directory=ROOT)
     httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
+    httpd.handle_error = lambda *a: None   # el navegador corta videos al cambiar de página
     threading.Thread(target=httpd.serve_forever, daemon=True).start()
     return httpd
 

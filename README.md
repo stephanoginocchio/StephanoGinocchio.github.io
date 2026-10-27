@@ -18,6 +18,7 @@ Web personal de Stephano Ginocchio + whiim (invitaciones web de boda), hecha a p
 
 - **`data/config.js`**: correo, ubicación, redes y el **WhatsApp de whiim**. Mientras el WhatsApp esté vacío, "Escríbenos" abre el chat de Instagram de @whiim__.
 - **`data/projects.js`**: proyectos del portafolio. La primera imagen es la portada, la segunda va junto al texto y el resto es la galería. Si todavía no tienes una imagen, deja `{ pendiente: '4/5', nota: 'Qué va aquí' }`: esa placa **no se publica**. La web muestra solo imágenes terminadas, y un proyecto sin ninguna (hoy Khōra y Parallelo) no aparece hasta que tenga la primera.
+- **Casos con desarrollo** (como Diseños en Tendencia): en `data/projects.js`, `process` agrega los pasos del proceso (título, texto e imágenes o videos) y `result` el bloque "Resultado". Los videos van en `assets/video/`, en MP4 H.264 de unos 720 px de ancho, con una imagen `poster`; se reproducen en silencio solo mientras se ven.
 - **`data/bodas.js`**: las carpetas del archivo de whiim.
 - **Textos de servicios**: en `index.html` (Visual / Editorial / Web).
 - **Textos de whiim** (portada, proceso, beneficios, cierre): en `whiim/index.html`.
@@ -30,7 +31,7 @@ Imágenes: WebP o JPG, de 1600–2000 px de ancho para portadas y de 1200 px par
 
 ## Página propia para compartir un proyecto
 
-`project.html#slug` arma cualquier proyecto, pero WhatsApp, Instagram y el correo no ejecutan JavaScript: al compartir ese link, la vista previa es la genérica de la web. Por eso Master Aplicador y VK Studio tienen página propia (`master-aplicador.html`, `vk-studio.html`), que se comparten como **stephanoginocchio.com/master-aplicador** y **stephanoginocchio.com/vk-studio**, cada una con su imagen de vista previa. Los links viejos con `#master-aplicador` llevan ahí solos.
+`project.html#slug` arma cualquier proyecto, pero WhatsApp, Instagram y el correo no ejecutan JavaScript: al compartir ese link, la vista previa es la genérica de la web. Por eso Master Aplicador, VK Studio y Diseños en Tendencia tienen página propia (`master-aplicador.html`, `vk-studio.html`, `disenos-en-tendencia.html`), que se comparten como **stephanoginocchio.com/master-aplicador**, **/vk-studio** y **/disenos-en-tendencia**, cada una con su imagen de vista previa. Los links viejos con `#master-aplicador` llevan ahí solos.
 
 Para hacer lo mismo con otro proyecto:
 

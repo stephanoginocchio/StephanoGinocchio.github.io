@@ -11,6 +11,14 @@
    - w y h son el ancho y alto reales: evitan saltos al cargar.
    - mobile es opcional, solo para la portada: versión vertical para celular.
 
+   Videos: en lugar de src, { video: 'assets/video/...mp4', poster: '...webp',
+   w, h }. MP4 H.264 a unos 720 px de ancho. Se reproducen en silencio solo
+   mientras están a la vista; con controls: true se puede activar el sonido.
+
+   process y result son opcionales, para casos con desarrollo (ver Diseños en
+   Tendencia): process es una lista de pasos { title, text, media: [...] } y
+   result agrega un bloque "Resultado" con las imágenes desde la tercera.
+
    page es opcional: un archivo .html propio del proyecto (como
    master-aplicador.html), con su título e imagen para la vista previa al
    compartir el link. La grilla y "Next project" enlazan ahí. Cómo crear uno:
@@ -109,6 +117,88 @@ window.PROJECTS = [
       { src: 'assets/img/proyectos/vk-studio/04.webp', thumb: 'assets/img/proyectos/vk-studio/04-sm.webp', w: 2400, h: 1350, alt: 'Aplicaciones recomendadas: el logo y el nombre sobre fondos rosa, blanco y negro.' },
       { src: 'assets/img/proyectos/vk-studio/05.webp', thumb: 'assets/img/proyectos/vk-studio/05-sm.webp', w: 2400, h: 1350, alt: 'Tipografía: Neue Haas para títulos y Satoshi para subtítulos y textos.' },
       { src: 'assets/img/proyectos/vk-studio/06.webp', thumb: 'assets/img/proyectos/vk-studio/06-sm.webp', w: 2400, h: 1350, alt: 'Patrón de logos VK sobre rosa intenso.' }
+    ]
+  },
+
+  {
+    slug: 'disenos-en-tendencia',
+    page: 'disenos-en-tendencia.html',   // página propia: se comparte como stephanoginocchio.com/disenos-en-tendencia
+    title: 'Diseños en Tendencia',
+    subtitle: 'Video ad · VK Studio × Khōra',
+    service: 'Visual',
+    year: '2026',
+    color: '#d9b26f',
+    statement: ['Las uñas al frente,', 'el diseño detrás.'],
+    text: [
+      'Campaña para Diseños en Tendencia, el taller privado de VK Studio con Khōra. El pedido era un video para pauta en Instagram, pero solo había fotos: nada grabado que editar.',
+      'Con las fotos de Kamila como base, generé en Adobe Firefly los planos en movimiento que faltaban y armé un reel para el feed, un anuncio de 15 segundos y dos piezas fijas.'
+    ],
+    credits: [
+      ['Año', '2026'],
+      ['Cliente', 'VK Studio × Khōra'],
+      ['Rol', 'Dirección de arte, video y edición'],
+      ['Fotografía', 'Kamila · Khōra'],
+      ['Herramientas', 'Firefly · Premiere Pro · Illustrator']
+    ],
+    /* Proceso: cada paso tiene título, texto e imágenes o videos.
+       cols = columnas en computadora, colsM = en celular. cap = leyenda. */
+    process: [
+      {
+        title: 'Solo había fotos',
+        text: 'Kamila fotografió las uñas del taller, pero no había video: solo fotos fijas y un clip corto. Ese fue todo el material de partida.',
+        cols: 3, colsM: 3,
+        media: [
+          { src: 'assets/img/proyectos/disenos-en-tendencia/foto-1.webp', w: 1200, h: 1200, alt: 'Foto original: las cinco uñas en fila sobre fondo oscuro.' },
+          { src: 'assets/img/proyectos/disenos-en-tendencia/foto-2.webp', w: 1200, h: 1200, alt: 'Foto original: macro del relieve dorado y la gema ámbar.' },
+          { src: 'assets/img/proyectos/disenos-en-tendencia/foto-3.webp', w: 1200, h: 1200, alt: 'Foto original: detalle de las uñas doradas y de mármol.' }
+        ]
+      },
+      {
+        title: 'Primero, una pieza fija',
+        text: [
+          'El arte anterior era tan llamativo que competía con las uñas, y los estilos de VK y Khōra chocan entre sí. Propuse lo contrario: fondo oscuro, tipografía sobria y las uñas como protagonistas.',
+          'A VK le pareció poco llamativo. Mi respuesta fue darle movimiento: un video en pauta llama más la atención que cualquier color.'
+        ],
+        cols: 2, colsM: 2,
+        media: [
+          { src: 'assets/img/proyectos/disenos-en-tendencia/prueba.webp', w: 720, h: 1280, cap: 'Primera propuesta', alt: 'Primera propuesta: pieza fija con el título, el temario y los datos del taller sobre la foto de las uñas.' }
+        ]
+      },
+      {
+        title: 'Video sin cámara',
+        text: 'Usé las fotos como referencia en Adobe Firefly para generar los planos que no existían: macros del relieve dorado, recorridos de cámara y pruebas de luz. Esas generaciones fueron los insumos de la edición.',
+        cols: 3, colsM: 2,
+        media: [
+          { video: 'assets/video/disenos-en-tendencia/firefly-29Q.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/ff-29Q.webp', w: 540, h: 960, alt: 'Clip generado con Adobe Firefly: macro de las uñas doradas.' },
+          { video: 'assets/video/disenos-en-tendencia/firefly-Oh9.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/ff-Oh9.webp', w: 540, h: 960, alt: 'Clip generado con Adobe Firefly: la cámara se acerca a las uñas.' },
+          { video: 'assets/video/disenos-en-tendencia/firefly-6kJ.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/ff-6kJ.webp', w: 540, h: 960, alt: 'Clip generado con Adobe Firefly: macro de la gema ámbar.' },
+          { video: 'assets/video/disenos-en-tendencia/firefly-ChB.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/ff-ChB.webp', w: 540, h: 960, alt: 'Clip generado con Adobe Firefly: las uñas bajo una luz clara.' },
+          { video: 'assets/video/disenos-en-tendencia/firefly-j42.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/ff-j42.webp', w: 540, h: 960, alt: 'Clip generado con Adobe Firefly: recorrido de cámara por la fila de uñas.' },
+          { video: 'assets/video/disenos-en-tendencia/firefly-pcN.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/ff-pcN.webp', w: 540, h: 960, alt: 'Clip generado con Adobe Firefly: prueba de las uñas con luz rosa.' }
+        ]
+      },
+      {
+        title: 'Una edición, dos versiones',
+        text: 'Edité los planos y animé el título y el temario sobre las uñas. Luego lo adapté a dos usos: el reel para el feed, con su portada para que el perfil se vea ordenado, y el anuncio, con el texto lejos de los bordes, donde Instagram pone el nombre de la cuenta y el botón.',
+        cols: 2, colsM: 2,
+        media: [
+          { src: 'assets/img/proyectos/disenos-en-tendencia/version-reel.webp', w: 720, h: 1280, cap: 'Reel · feed', alt: 'Cuadro del reel para el feed, con el temario y los datos del taller.' },
+          { src: 'assets/img/proyectos/disenos-en-tendencia/version-anuncio.webp', w: 720, h: 1280, cap: 'Anuncio · zonas seguras', alt: 'El mismo cuadro en el anuncio, con el texto más lejos de los bordes.' }
+        ]
+      }
+    ],
+    result: {
+      title: 'Resultado',
+      text: 'Un reel de 19 segundos con portada para el feed, un anuncio de 15 segundos y dos piezas fijas para pauta, todo en formato vertical 1080 × 1920. Las uñas siguen siendo lo primero que se ve.',
+      cols: 4
+    },
+    images: [
+      { src: 'assets/img/proyectos/disenos-en-tendencia/01.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/01-sm.webp', mobile: 'assets/img/proyectos/disenos-en-tendencia/01-m.webp', w: 2048, h: 1212, alt: 'Uñas press-on de Khōra con relieve dorado, mármol y una gema ámbar, en fila bajo un foco de luz. Foto de Kamila.' },
+      { src: 'assets/img/proyectos/disenos-en-tendencia/02.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/02-sm.webp', w: 720, h: 1275, alt: 'Portada del reel: «Taller privado. Diseños en Tendencia» sobre las uñas, con los logos de Khōra y VK.' },
+      { video: 'assets/video/disenos-en-tendencia/reel.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/reel-poster.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/reel-poster-sm.webp', controls: true, w: 720, h: 1280, cap: 'Reel · 19 s · con sonido', alt: 'Reel final de Diseños en Tendencia.' },
+      { video: 'assets/video/disenos-en-tendencia/anuncio.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/anuncio-poster.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/anuncio-poster-sm.webp', controls: true, w: 720, h: 1280, cap: 'Anuncio · 15 s', alt: 'Anuncio final de 15 segundos.' },
+      { src: 'assets/img/proyectos/disenos-en-tendencia/ads-1.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/ads-1-sm.webp', w: 720, h: 1279, cap: 'Pieza fija · anuncio', alt: 'Pieza fija para anuncio con el temario y los datos de contacto.' },
+      { src: 'assets/img/proyectos/disenos-en-tendencia/ads-2.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/ads-2-sm.webp', w: 720, h: 1279, cap: 'Pieza fija · con marco', alt: 'Variante de la pieza fija con marco ornamental.' }
     ]
   },
 

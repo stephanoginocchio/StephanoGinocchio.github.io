@@ -262,6 +262,46 @@
 }
 .p-gallery img { width: 100%; height: 100%; object-fit: cover; }
 
+/* ---------- PROYECTO · proceso y resultado (casos con desarrollo) ---------- */
+.p-process { padding: 0 var(--pad) clamp(40px, 5vw, 80px); }
+.p-process__title { margin-bottom: clamp(26px, 3.4vw, 50px); }
+.p-step,
+.p-result__head {
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+  column-gap: clamp(24px, 4vw, 64px);
+  border-top: 1px solid var(--line);
+  padding-top: clamp(24px, 2.6vw, 40px);
+}
+.p-step { padding-bottom: clamp(44px, 5vw, 80px); }
+.p-step__text { position: sticky; top: calc(var(--nav-h) + 24px); align-self: start; max-width: 34em; }
+.p-step__n { display: block; font: 400 11px/1.3 var(--f-mono); letter-spacing: .14em; color: var(--mute); }
+.p-step__title { margin: 12px 0 18px; font: 700 clamp(24px, 2.2vw, 32px)/1.05 var(--f-display); letter-spacing: -.01em; }
+.p-step__text p + p,
+.p-result__head p + p { margin-top: 1em; }
+.p-step__media,
+.p-result__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+.p-fig { margin: 0; }
+.p-fig__media { position: relative; aspect-ratio: var(--ar, 1); overflow: hidden; background: #0d0d0d; }
+.p-fig__media img,
+.p-fig__media video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.p-fig__cap { margin-top: 9px; font: 400 11px/1.4 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.p-result { padding: 0 var(--pad) clamp(80px, 8vw, 130px); }
+.p-result__head { align-items: start; margin-bottom: clamp(26px, 3vw, 44px); }
+.p-result__head .t-mono { max-width: 40em; }
+@media (max-width: 759px) {
+  .p-step,
+  .p-result__head { grid-template-columns: 1fr; row-gap: 20px; }
+  .p-step__text { position: static; }
+  .p-step__media { grid-template-columns: repeat(var(--cols-m, 2), minmax(0, 1fr)); gap: 8px; }
+  .p-result__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+}
+
 .p-next {
   display: block;
   padding: clamp(40px, 5vw, 70px) var(--pad) clamp(70px, 8vw, 120px);
