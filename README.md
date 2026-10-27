@@ -29,6 +29,16 @@ Web personal de Stephano Ginocchio + whiim (invitaciones web de boda), hecha a p
 
 Imágenes: WebP o JPG, de 1600–2000 px de ancho para portadas y de 1200 px para el resto. Las miniaturas de la grilla (`thumb`) van bien a 520 px.
 
+### Medidas para diseñar (iguales en todos los proyectos)
+
+| Pieza | Tamaño | Notas |
+|---|---|---|
+| Portada, computadora | 2560 × 1440 (16:9) | Llena la pantalla y se recorta según el monitor: lo importante dentro del centro, de x 150 a 2410 y de y 170 a 1270. Arriba a la izquierda (unos 1220 × 500) la web escribe el título del proyecto y oscurece la parte de arriba. |
+| Portada, celular | 1080 × 1920 (9:16) | Campo `mobile`. Sale en pantallas verticales (celular y tablet parada). Lo importante entre y 650 y 1650, a 60 px de los lados: arriba va el título. |
+| Imagen junto al texto | 1080 × 1200 (9:10) | La segunda imagen. Se ve completa, sin recortes. |
+| Grilla (home y portfolio) | 1080 × 1350 (4:5) | 3 por proyecto, en el campo `grid`. Deja 48 px libres al borde (hace zoom al pasar el mouse) y textos de al menos 70 px de alto: en celular la casilla mide unos 180 px de ancho. La web pone el nombre del proyecto encima, fuera de la imagen. |
+| Vista previa al compartir | 1200 × 630 | `assets/img/og/`, JPG de menos de 300 KB. Lo clave en el centro. |
+
 ## Página propia para compartir un proyecto
 
 `project.html#slug` arma cualquier proyecto, pero WhatsApp, Instagram y el correo no ejecutan JavaScript: al compartir ese link, la vista previa es la genérica de la web. Por eso Master Aplicador, VK Studio y Diseños en Tendencia tienen página propia (`master-aplicador.html`, `vk-studio.html`, `disenos-en-tendencia.html`), que se comparten como **stephanoginocchio.com/master-aplicador**, **/vk-studio** y **/disenos-en-tendencia**, cada una con su imagen de vista previa. Los links viejos con `#master-aplicador` llevan ahí solos.

@@ -5,6 +5,12 @@
 
    Imágenes: la PRIMERA es la portada de la página del proyecto, la SEGUNDA va
    junto al texto y el resto forma la galería. En la grilla salen todas, en orden.
+
+   Medidas para diseñar (iguales para todos los proyectos; guías en el README):
+   - Portada, computadora: 2560 × 1440 (16:9). Portada, celular: 1080 × 1920
+     (9:16), en el campo mobile.
+   - Imagen junto al texto: 1080 × 1200 (9:10).
+   - Grilla: 3 casillas por proyecto, 1080 × 1350 cada una (4:5), en grid.
      { src: 'assets/img/proyectos/slug/01.jpg', thumb: '...01-sm.jpg',
        alt: 'Qué se ve', w: 1600, h: 1000 }
    - thumb es opcional (versión chica para la grilla, ~520 px de ancho).
@@ -165,7 +171,8 @@ window.PROJECTS = [
         ],
         cols: 2, colsM: 2,
         media: [
-          { src: 'assets/img/proyectos/disenos-en-tendencia/prueba.webp', w: 720, h: 1280, cap: 'Primera propuesta', alt: 'Primera propuesta: pieza fija con el título, el temario y los datos del taller sobre la foto de las uñas.' }
+          { src: 'assets/img/proyectos/disenos-en-tendencia/prueba.webp', w: 720, h: 1280, cap: 'Primera propuesta', alt: 'Primera propuesta: pieza fija con el título, el temario y los datos del taller sobre la foto de las uñas.' },
+          { src: 'assets/img/proyectos/disenos-en-tendencia/ads-1.webp', w: 720, h: 1279, cap: 'Pieza final', alt: 'Pieza fija final: las uñas más grandes, el temario y los datos del taller.' }
         ]
       },
       {
@@ -205,7 +212,7 @@ window.PROJECTS = [
     },
     images: [
       { src: 'assets/img/proyectos/disenos-en-tendencia/01.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/01-sm.webp', mobile: 'assets/img/proyectos/disenos-en-tendencia/01-m.webp', w: 2048, h: 1212, alt: 'Uñas press-on de Khōra con relieve dorado, mármol y una gema ámbar, en fila bajo un foco de luz. Foto de Kamila.' },
-      { src: 'assets/img/proyectos/disenos-en-tendencia/02.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/02-sm.webp', w: 720, h: 1275, alt: 'Portada del reel: «Taller privado. Diseños en Tendencia» sobre las uñas, con los logos de Khōra y VK.' },
+      { src: 'assets/img/proyectos/disenos-en-tendencia/intro.webp', w: 1080, h: 1200, alt: 'Portada del reel: «Taller privado. Diseños en Tendencia» sobre las uñas.' },
       { video: 'assets/video/disenos-en-tendencia/reel.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/reel-poster.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/reel-poster-sm.webp', controls: true, w: 720, h: 1280, cap: 'Reel · 19 s · con sonido', alt: 'Reel final de Diseños en Tendencia.' },
       { video: 'assets/video/disenos-en-tendencia/anuncio.mp4', poster: 'assets/img/proyectos/disenos-en-tendencia/anuncio-poster.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/anuncio-poster-sm.webp', controls: true, w: 720, h: 1280, cap: 'Anuncio · 15 s', alt: 'Anuncio final de 15 segundos.' },
       { src: 'assets/img/proyectos/disenos-en-tendencia/ads-1.webp', thumb: 'assets/img/proyectos/disenos-en-tendencia/ads-1-sm.webp', w: 720, h: 1279, cap: 'Pieza fija · anuncio', alt: 'Pieza fija para anuncio con el temario y los datos de contacto.' },

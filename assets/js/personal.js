@@ -59,9 +59,10 @@
     var tag = '<img src="' + esc(asset(src)) + '" alt="' + esc(img.alt || '') + '"' +
       (img.w ? ' width="' + img.w + '" height="' + img.h + '"' : '') +
       ' loading="' + (o.eager ? 'eager' : 'lazy') + '" decoding="async">';
-    /* portada: versión vertical opcional para celular (campo "mobile") */
+    /* portada: versión vertical opcional (campo "mobile") para pantallas
+       verticales: celulares y tablets paradas */
     if (o.eager && img.mobile) {
-      tag = '<picture><source media="(max-width: 699px)" srcset="' + esc(asset(img.mobile)) + '">' + tag + '</picture>';
+      tag = '<picture><source media="(max-aspect-ratio: 1/1)" srcset="' + esc(asset(img.mobile)) + '">' + tag + '</picture>';
     }
     return tag;
   }

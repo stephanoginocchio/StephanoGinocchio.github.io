@@ -242,7 +242,7 @@
   align-self: start;
   margin-top: clamp(20px, 2.6vw, 38px);
   aspect-ratio: var(--ar, 1.6);
-  max-height: 78svh;
+  max-height: calc(100svh - var(--nav-h) - 110px);   /* ocupa casi toda la pantalla de alto */
   overflow: hidden;
   background: #0d0d0d;
 }
